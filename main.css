@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+div.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #eee;
+}
+
+header > div.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+nav ul li a:hover {
+    text-decoration: line-through;
+}
+
+main {
+    margin-top: 25px;
+}
+
+section {
+    margin-top: 70px;
+    text-align: justify;
+}
+
+#sobre h2 {
+    margin-left: 10px;
+}
+
+#sobre p {
+    text-indent: 25px;
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+section h2 {
+    padding-left: 10px;
+    border-left: 3px solid #eee;
+    border-bottom: 3px solid #eee;
+    line-height: 2em;
+}
+
+section article p {
+    margin: 10px;
+}
+
+#sobre {
+    display: flex;
+}
+
+#sobre img {
+    max-width: 360px;
+}
+
+.lista-produtos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.produto h3 {
+    margin-top: 5px;
+}
+
+.produto:hover button {
+    background-color: white;
+    color: black;
+}
+
+.produto {
+    cursor: pointer;
+    max-width: 23%;
+    font-size: 0.9em;
+}
+
+#produtos img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    border: 3px solid black;
+}
+
+@media screen and (max-width: 1023px) {
+    div.container {
+        width: 85%;
+    }
+    #sobre {
+        display: block;
+    }
+    section h2 {
+        margin-left: 0;
+    }
+    #sobre p {
+        font-size: 1.3em;
+    }
+    #sobre img {
+        display: block;
+        margin: 30px auto;
+        max-width: 90%;
+    }
+    .lista-produtos {
+        flex-wrap: wrap;
+    }
+    .produto {
+        max-width: 47%;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav ul {
+        display: block;
+    }
+    
+    .lista-produtos {
+        display: block;
+    }
+    .produto {
+        max-width: 80%;
+        margin: 0 auto 70px auto;
+    }
+}
